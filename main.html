@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Practice Page</title>
+	<style>
+		body {
+			max-width: 720px;
+			margin: 40px auto;
+			padding: 0 20px;
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+			color: #243047;
+			background: #f3f6fb;
+		}
+
+		main {
+			padding: 24px;
+			background: white;
+			border-radius: 12px;
+		}
+
+		h1 { color: #3157c8; }
+		button { padding: 10px 16px; cursor: pointer; }
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Welcome to HTML Practice</h1>
+			<p>Explore headings, lists, links, and a simple button interaction.</p>
+		</header>
+
+		<section>
+			<h2>Things to try</h2>
+			<ul>
+				<li>Change this heading</li>
+				<li>Add another list item</li>
+				<li>Experiment with the CSS colors</li>
+			</ul>
+			<p>Learn more in the <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">MDN HTML guide</a>.</p>
+		</section>
+
+		<section>
+			<h2>Try the button</h2>
+			<button id="hello-button" type="button">Click me</button>
+			<p id="message" aria-live="polite"></p>
+		</section>
+	</main>
+
+	<script>
+		document.querySelector("#hello-button").addEventListener("click", () => {
+			document.querySelector("#message").textContent = "Nice work practicing HTML!";
+		});
+	</script>
+</body>
+</html>
